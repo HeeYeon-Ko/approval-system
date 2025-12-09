@@ -23,3 +23,8 @@ generated/
 
 # Node modules (혹시 프론트 있으면)
 node_modules/
+
+# MongoDB
+mongo-data/
+**/mongo-data/
+diagnostic.data/

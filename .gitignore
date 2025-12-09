@@ -1,0 +1,25 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+*/build/
+**/build/
+
+# Logs
+*.log
+
+# OS/System
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+
+# Proto generated files (optional)
+generated/
+
+# Node modules (혹시 프론트 있으면)
+node_modules/

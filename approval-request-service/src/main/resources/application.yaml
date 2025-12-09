@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: approval-request-service
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: approval-db
+
+server:
+  port: 8081
+
+
+employee-service:
+  base-url: http://localhost:8080
+
+
+approval-processing:
+  host: localhost
+  port: 9090
+
+
+notification-service:
+  base-url: http://localhost:8083

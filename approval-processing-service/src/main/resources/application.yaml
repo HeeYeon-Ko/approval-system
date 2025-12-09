@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: approval-processing-service
+
+server:
+  port: 8082
+
+# gRPC 서버 포트 (GrpcServerConfig에서 9090으로 사용)
+grpc:
+  port: 9090
+
+# Approval Request Service(gRPC 서버)로 결과 보내는 클라이언트 설정
+approval-request:
+  host: localhost
+  port: 9091
+
+logging:
+  level:
+    root: INFO
+    com.example.approval_processing_service: DEBUG

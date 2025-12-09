@@ -12,3 +12,8 @@ CREATE TABLE employees (
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+CREATE USER 'projectuser'@'%' IDENTIFIED BY 'project1234';
+GRANT ALL PRIVILEGES ON employee_db.* TO 'projectuser'@'%';
+FLUSH PRIVILEGES;
+
+

@@ -1,6 +1,7 @@
 package com.example.approval_processing_service.controller;
 
 import com.example.approval.grpc.ApprovalRequest;
+import com.example.approval_processing_service.dto.ProcessQueueDto;
 import com.example.approval_processing_service.service.ProcessingDecisionService;
 import com.example.approval_processing_service.service.ProcessingQueueService;
 import java.util.List;
@@ -16,8 +17,19 @@ public class ProcessingController {
     private final ProcessingDecisionService decisionService;
 
     @GetMapping("/process/{approverId}")
-    public ResponseEntity<List<ApprovalRequest>> getQueue(@PathVariable int approverId) {
-        return ResponseEntity.ok(queue.getQueue(approverId));
+    public ResponseEntity<List<ProcessQueueDto>> getQueue(@PathVariable int approverId) {
+        List<ApprovalRequest> list = queue.getQueue(approverId);
+
+        List<ProcessQueueDto> dtoList = list.stream()
+                .map(req -> new ProcessQueueDto(
+                        req.getRequestId(),
+                        req.getRequesterId(),
+                        req.getTitle(),
+                        req.getContent()
+                ))
+                .toList();
+
+        return ResponseEntity.ok(dtoList);
     }
 
     public record DecisionRequest(String status) {}

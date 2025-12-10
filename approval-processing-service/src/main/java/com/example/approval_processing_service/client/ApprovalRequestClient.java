@@ -1,7 +1,7 @@
 package com.example.approval_processing_service.client;
 
-import com.example.approval_processing_service.grpc.ApprovalGrpc;
-import com.example.approval_processing_service.grpc.ApprovalResultRequest;
+import com.example.approval.grpc.ApprovalGrpc;
+import com.example.approval.grpc.ApprovalResultRequest;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import jakarta.annotation.PreDestroy;

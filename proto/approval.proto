@@ -3,7 +3,7 @@ syntax = "proto3";
 package approval;
 
 option java_multiple_files = true;
-option java_package = "com.example.approval_request_service.grpc";
+option java_package = "com.example.approval.grpc";
 option java_outer_classname = "ApprovalProto";
 
 // Approval Processing Service와 통신하는 서비스

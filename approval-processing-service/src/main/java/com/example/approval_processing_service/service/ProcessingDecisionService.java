@@ -1,8 +1,8 @@
 package com.example.approval_processing_service.service;
 
 import com.example.approval_processing_service.client.ApprovalRequestClient;
-import com.example.approval_processing_service.grpc.ApprovalRequest;
-import com.example.approval_processing_service.grpc.Step;
+import com.example.approval.grpc.ApprovalRequest;
+import com.example.approval.grpc.Step;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,8 +1,8 @@
 package com.example.approval_processing_service.service;
 
 import org.springframework.stereotype.Service;
-import com.example.approval_processing_service.grpc.ApprovalRequest;
-import com.example.approval_processing_service.grpc.Step;
+import com.example.approval.grpc.ApprovalRequest;
+import com.example.approval.grpc.Step;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 

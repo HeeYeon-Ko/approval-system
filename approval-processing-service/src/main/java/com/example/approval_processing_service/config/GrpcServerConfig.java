@@ -1,8 +1,8 @@
 package com.example.approval_processing_service.config;
 
+import com.example.approval_processing_service.grpc.ApprovalGrpcServer;
 import java.io.IOException;
 import org.springframework.stereotype.Component;
-import com.example.approval_processing_service.grpc.ApprovalGrpcServer;
 import io.grpc.Server;
 import io.grpc.netty.shaded.io.grpc.netty.NettyServerBuilder;
 import jakarta.annotation.PostConstruct;

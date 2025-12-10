@@ -1,5 +1,8 @@
 package com.example.approval_processing_service.grpc;
 
+import com.example.approval.grpc.ApprovalGrpc;
+import com.example.approval.grpc.ApprovalRequest;
+import com.example.approval.grpc.ApprovalResponse;
 import com.example.approval_processing_service.service.ProcessingQueueService;
 import org.springframework.stereotype.Component;
 import io.grpc.stub.StreamObserver;
@@ -28,3 +31,8 @@ public class ApprovalGrpcServer extends ApprovalGrpc.ApprovalImplBase{
         responseObserver.onCompleted();
     }
 }
+
+
+
+
+

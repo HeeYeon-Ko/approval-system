@@ -1,6 +1,6 @@
 package com.example.approval_processing_service.controller;
 
-import com.example.approval_processing_service.grpc.ApprovalRequest;
+import com.example.approval.grpc.ApprovalRequest;
 import com.example.approval_processing_service.service.ProcessingDecisionService;
 import com.example.approval_processing_service.service.ProcessingQueueService;
 import java.util.List;

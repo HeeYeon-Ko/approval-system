@@ -1,10 +1,10 @@
 package com.example.approval_request_service.client;
 
-import com.example.approval_request_service.grpc.ApprovalGrpc;
-import com.example.approval_request_service.grpc.ApprovalRequest;
+import com.example.approval.grpc.ApprovalGrpc;
+import com.example.approval.grpc.ApprovalRequest;
 import com.example.approval_request_service.domain.Step;
 
-import com.example.approval_request_service.grpc.ApprovalResponse;
+import com.example.approval.grpc.ApprovalResponse;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 import jakarta.annotation.PreDestroy;
@@ -45,8 +45,8 @@ public class ApprovalProcessingClient {
             List<Step> domainSteps
     ) {
         // Domain Step -> gRPC Step 변환
-        List<com.example.approval_request_service.grpc.Step> grpcSteps = domainSteps.stream()
-                .map(s -> com.example.approval_request_service.grpc.Step.newBuilder()
+        List<com.example.approval.grpc.Step> grpcSteps = domainSteps.stream()
+                .map(s -> com.example.approval.grpc.Step.newBuilder()
                         .setStep(s.getStep())
                         .setApproverId(Math.toIntExact(s.getApproverId()))
                         .setStatus(s.getStatus())

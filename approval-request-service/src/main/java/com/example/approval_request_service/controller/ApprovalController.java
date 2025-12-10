@@ -6,7 +6,6 @@ import com.example.approval_request_service.dto.res.RequestIdResponse;
 import com.example.approval_request_service.service.ApprovalService;
 import jakarta.validation.Valid;
 import java.util.List;
-import java.util.Map;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

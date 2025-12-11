@@ -11,6 +11,9 @@ spring:
 server:
   port: 8081
 
+grpc:
+  server:
+    port: 9091
 
 employee-service:
   base-url: http://localhost:8080
